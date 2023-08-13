@@ -58,7 +58,7 @@ spec:
     - name: gateway-port
       port: 5432
       targetPort: 5432
-  clusterIP: 10.152.183.133
+  type: ClusterIP
   selector:
     app: payments-service-postgres
 ---
@@ -83,6 +83,9 @@ spec:
       - name: payments-service-springboot
         image: 192.168.20.222:8443/digitalbiohumans/poc/payments-service-springboot:0.0.2-SNAPSHOT
         imagePullPolicy: Always
+        env:
+          - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
+            value: 'true'
         ports:
         - name: port-tcp
           containerPort: 8080
@@ -104,7 +107,7 @@ spec:
   - name: gateway-port
     port: 8080
     targetPort: 8080
-  clusterIP: 10.152.183.140
+  type: ClusterIP
   selector:
     app: payments-service-springboot
 ---
