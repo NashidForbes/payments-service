@@ -29,6 +29,8 @@ dependencies {
     implementation("org.axonframework.extensions.kotlin:axon-kotlin:4.7.0")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.cloud:spring-cloud-starter-config:3.1.0")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.0")
     implementation("com.google.guava:guava:30.1-jre")
     //implementation("org.apache.commons:commons-lang3:3.12.0")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.1.0")
