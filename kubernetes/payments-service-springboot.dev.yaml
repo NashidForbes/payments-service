@@ -81,7 +81,7 @@ spec:
     spec:
       containers:
       - name: payments-service-springboot
-        image: 192.168.20.222:8443/digitalbiohumans/poc/payments-service-springboot:0.0.2-SNAPSHOT
+        image: 192.168.20.222:8443/digitalbiohumans/poc/payments-service-springboot:0.0.5-SNAPSHOT
         imagePullPolicy: Always
         env:
           - name: EUREKA_INSTANCE_PREFER_IP_ADDRESS
