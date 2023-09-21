@@ -32,6 +32,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-config:3.1.0")
     implementation("org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.0")
     implementation("com.google.guava:guava:30.1-jre")
+    implementation("net.logstash.logback:logstash-logback-encoder:7.4")
     //implementation("org.apache.commons:commons-lang3:3.12.0")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.1.0")
     compileOnly("org.projectlombok:lombok")
