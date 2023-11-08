@@ -68,7 +68,14 @@ metadata:
   name: payments-service-springboot
   labels:
     app: payments-service-springboot
+    app-log-type: json-logging-app
+    decode_log_event_to_json_object: "true"
+    collect_logs_with_filebeat: "true"
   namespace: dev
+  annotations:
+    co.elastic.logs.food-ordering-demo-springboot/json.keys_under_root: "true"
+    co.elastic.logs.food-ordering-demo-springboot/json.add_error_key: "true"
+    co.elastic.logs.food-ordering-demo-springboot/json.message_key: "message"
 spec:
   replicas: 1
   selector:
@@ -78,6 +85,13 @@ spec:
     metadata:
       labels:
         app: payments-service-springboot
+        app-log-type: json-logging-app
+        decode_log_event_to_json_object: "true"
+        collect_logs_with_filebeat: "true"
+      annotations:
+        co.elastic.logs.food-ordering-demo-springboot/json.keys_under_root: "true"
+        co.elastic.logs.food-ordering-demo-springboot/json.add_error_key: "true"
+        co.elastic.logs.food-ordering-demo-springboot/json.message_key: "message"
     spec:
       containers:
       - name: payments-service-springboot
