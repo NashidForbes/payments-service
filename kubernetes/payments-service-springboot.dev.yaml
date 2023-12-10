@@ -95,7 +95,7 @@ spec:
     spec:
       containers:
       - name: payments-service-springboot
-        image: 192.168.20.222:8443/digitalbiohumans/poc/payments-service-springboot:0.0.7-spring-cloud-config-secure-client-SNAPSHOT
+        image: ${NEXUS_REPO_HOST}/digitalbiohumans/poc/payments-service-springboot:0.0.7-spring-cloud-config-secure-client-SNAPSHOT
         imagePullPolicy: Always
         env:
           - name: SPRING_PROFILES_ACTIVE
